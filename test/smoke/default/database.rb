@@ -12,7 +12,7 @@ end
 
 describe port 3306 do
   it { should be_listening }
-  its('protocols') { should include('tcp6') }
+  its('protocols') { should include('tcp') }
 end
 
 describe command("mysql -h 127.0.0.1 -uroot -pfakerootpassword -s -e 'show databases;'") do
